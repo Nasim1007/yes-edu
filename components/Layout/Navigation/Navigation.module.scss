@@ -26,6 +26,13 @@
       stroke: #fff;
       display: none;
     }
+    &:hover {
+      background: $secondary;
+      color: #fff;
+      svg {
+        stroke: #fff;
+      }
+    }
 
     @media (max-width: $desktopSmall) {
       background: $primary;

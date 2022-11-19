@@ -50,6 +50,10 @@
 
   .Button {
     width: 208px;
+    &:hover{
+      background: $primary;
+      color: #fff;
+    }
   }
 
   @media (max-width: $desktopSmall) {
