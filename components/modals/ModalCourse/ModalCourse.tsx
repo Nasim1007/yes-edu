@@ -1,4 +1,4 @@
-import classes from './ModalCourse.module.scss'
+import classes from '../Modal.module.scss'
 import Modal from '../../UI/Modal/Modal'
 import Input from '../../UI/Input/Input'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -22,8 +22,8 @@ interface ModalCourseProps {
   courses: ICourse[]
 }
 
-function ModalCourse({courses}: ModalCourseProps) {
-  const {isOpen, status, selectedCourse} = useAppSelector(state => state.lead)
+function ModalCourse({ courses }: ModalCourseProps) {
+  const { isOpen, status, selectedCourse } = useAppSelector(state => state.lead)
   const dispatch = useAppDispatch()
   const router = useRouter()
 
@@ -34,7 +34,7 @@ function ModalCourse({courses}: ModalCourseProps) {
     getValues,
     watch,
     reset,
-    formState: {errors},
+    formState: { errors },
     clearErrors
   } = useForm<Inputs>({
     mode: 'onSubmit',
@@ -136,7 +136,7 @@ function ModalCourse({courses}: ModalCourseProps) {
           </form>
         </>
       ) : (
-        <ModalCourseResponse/>
+        <ModalCourseResponse />
       )}
     </Modal>
   )

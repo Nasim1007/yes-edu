@@ -6,15 +6,18 @@ import ModalCourse from '../modals/ModalCourse/ModalCourse'
 import { ICourse } from '../../models/ICourse'
 import { useRouter } from 'next/router'
 import { useAppDispatch } from '../../store/hooks'
-import { openLeadModal } from '../../store/reducers/leadSlice'
+import { openLeadModal, openVacanModal } from '../../store/reducers/leadSlice'
+import ModalVacan from '../modals/ModalVacancie/ModalVacancie'
+import { IVacancy } from '../../models/IVacancy'
 
 
 interface LayoutProps {
   courses: ICourse[]
   children: ReactNode
+  vacancies: IVacancy[]
 }
 
-function Layout({children, courses}: LayoutProps) {
+function Layout({ children, courses, vacancies }: LayoutProps) {
   const router = useRouter()
   const dispatch = useAppDispatch()
 
@@ -22,15 +25,19 @@ function Layout({children, courses}: LayoutProps) {
     if (router.query?.course) {
       dispatch(openLeadModal(+router.query.course))
     }
+    if (router.query?.vacan) {
+      dispatch(openVacanModal(+router.query.vacan))
+    }
   }, [router.query])
 
   return (
     <>
-      <Header/>
+      <Header />
       <main className={classes.Content}>{children}</main>
-      <Footer/>
+      <Footer />
 
-      <ModalCourse courses={courses}/>
+      <ModalCourse courses={courses} />
+      <ModalVacan vacancies={vacancies} />
     </>
   )
 }
