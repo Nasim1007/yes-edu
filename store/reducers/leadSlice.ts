@@ -33,7 +33,7 @@ export const sendLead = createAsyncThunk('lead/sendLead', async (form: ILead) =>
 
   let message = `<b>Заявка с сайта!</b>\n`
   message += `<b>Отправитель: </b> ${firstName}\n`
-  message += `<b>Номер телефона:</b> ${phone}\n`
+  message += `<b>Номер телефона:</b> ${phone.replace(/\s/g, '')}\n`
   message += `<b>Курс: </b> ${course}\n`
   message += `<b>Дата: ${new Date().toLocaleString()}</b>\n`
   message += `<b>Тип устройства: ${device}</b>`
