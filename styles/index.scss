@@ -1,0 +1,13 @@
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "core";
+//@import "fonts";
+
+#__next {
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+

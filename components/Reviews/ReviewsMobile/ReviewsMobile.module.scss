@@ -1,0 +1,63 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Slider {
+  margin:0 -10px;
+  display: none !important;
+
+  //:global(.slick-list) {
+  //  margin: 0 -5px;
+  //}
+  //
+  //:global(.slick-slide) {
+  //  margin-left: 0px;
+  //  margin-right: 0px;
+  //}
+
+  :global(.slick-dots) {
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0;
+    display: flex !important;
+    justify-content: center;
+
+    :global(.slick-active) {
+      .Dot {
+        background: $red;
+      }
+    }
+  }
+
+  @media (max-width: $mobileLarge) {
+    display: block !important;
+  }
+}
+
+.Slide {
+  //margin-left: 20px;
+  //margin-right: 20px;
+  padding: 0 10px;
+  max-width: 400px;
+
+  @media (max-width: 500px) {
+    max-width: 350px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 420px) {
+    max-width: none;
+  }
+}
+
+.Dot {
+  list-style: none;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  background: $secondary;
+  border-radius: 50%;
+  margin: 0 4px;
+}

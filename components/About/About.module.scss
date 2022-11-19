@@ -1,0 +1,151 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Wrapper {
+  margin: 80px auto;
+
+  @media (max-width: $desktopSmall) {
+    margin: 60px auto;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 40px auto;
+  }
+}
+
+.About {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  align-items: center;
+
+  @media (max-width: $desktopSmall) {
+    padding: 30px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 24px;
+  }
+
+  @media (max-width: $tabletSmall - 1px) {
+    flex-wrap: wrap;
+  }
+}
+
+.Left {
+  flex-basis: 45.75%;
+  margin-right: 4%;
+  flex-shrink: 0;
+
+  @media (max-width: 860px) {
+    flex-basis: 38%;
+    margin-right: 40px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: $tabletSmall - 1px) {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+}
+
+.Right {
+  flex-basis: 45.75%;
+
+  @media (max-width: $desktopSmall) {
+    flex-grow: 1;
+  }
+
+  @media (max-width: $tabletSmall - 1px) {
+    flex-basis: 100%;
+  }
+}
+
+.Title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  color: $black;
+  margin: 0 0 80px;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  @media (max-width: 860px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $tabletSmall - 1px) {
+    margin-bottom: 0;
+    margin-right: 24px;
+    max-width: 240px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 20px;
+    line-height: 24px;
+    hyphens: auto;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 16px;
+  }
+}
+
+.Red {
+  color: $red;
+}
+
+.Yellow {
+  color: $secondary;
+}
+
+.Blue {
+  color: $primary;
+}
+
+.Button {
+  min-height: 56px;
+  width: 186px;
+
+  @media (max-width: $tablet) {
+    min-height: 44px;
+    width: auto;
+  }
+}
+
+.Text {
+  font-size: 18px;
+  line-height: 28px;
+  color: $primary;
+  margin: 0;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (max-width: $tabletSmall) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

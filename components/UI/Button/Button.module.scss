@@ -1,0 +1,97 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Button {
+  display: inline-block;
+  padding: 16px 28px;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  transition-property: background;
+  transition-duration: 250ms;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+
+  @media (max-width: $desktopSmall - 1px) {
+    padding: 12px 24px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 12px;
+  }
+
+  &:focus {
+    outline: 2px solid $secondary;
+  }
+}
+
+
+// Backgrounds
+.PrimaryBg {
+  background: $primary;
+
+  &:hover {
+    background: #43B6FF;
+  }
+
+  &:active {
+    background: #0C88D8;
+  }
+}
+
+.SecondaryBg {
+  background: $secondary;
+
+  &:hover {
+    background: #FCBF24;
+  }
+}
+
+.TransparentBg {
+  background: transparent;
+
+  &:hover {
+
+  }
+}
+
+// Colors
+
+.PrimaryColor {
+  color: $primary;
+
+  &:hover {
+    outline: 2px solid $secondary;
+  }
+}
+
+.SecondaryColor {
+  color: $secondary;
+}
+
+.BlackColor {
+  color: $black;
+
+  &:active,
+  &:focus {
+    outline: 2px solid $secondary;
+  }
+}
+
+// Border
+
+.BorderNone {
+  border: none;
+}
+
+.BorderPrimary {
+  border: 1px solid $primary;
+}
+
+.BorderSecondary {
+  border: 1px solid $secondary;
+}

@@ -1,0 +1,117 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+$marginRightMobile: 3.03%;
+$marginRightTablet: 2.85%;
+$marginRightDesktop: 2.11%;
+$marginRightDesktopMedium: 2.8%;
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    padding: 16px;
+    border-radius: 12px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    margin-bottom: $marginRightMobile;
+    min-height: 106px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: $tabletSmall - 1px) {
+      &:nth-of-type(5n + 1) {
+        width: 50.5%;
+        margin-right: $marginRightMobile;
+      }
+
+      &:nth-of-type(5n + 2) {
+        width: 46.4%;
+      }
+
+      &:nth-of-type(5n + 3) {
+        width: 34.34%;
+        margin-right: $marginRightMobile;
+      }
+
+      &:nth-of-type(5n + 4) {
+        width: 31.56%;
+        margin-right: $marginRightMobile;
+      }
+
+      &:nth-of-type(5n + 5) {
+        width: 28.03%;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $tabletSmall) {
+      padding: 20px;
+      margin-bottom: $marginRightTablet;
+      min-height: 120px;
+
+      &:nth-of-type(6n + 1) {
+        width: 35.71%;
+        margin-right: $marginRightTablet;
+      }
+
+      &:nth-of-type(6n + 2) {
+        width: 30%;
+        margin-right: $marginRightTablet;
+      }
+
+      &:nth-of-type(6n + 3) {
+        width: 28.57%;
+      }
+
+      &:nth-of-type(6n + 4) {
+        width: 28.57%;
+        margin-right: $marginRightTablet;
+      }
+
+      &:nth-of-type(6n + 5) {
+        width: 30%;
+        margin-right: $marginRightTablet;
+      }
+
+      &:nth-of-type(6n + 6) {
+        width: 35.71%;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      padding: 24px;
+      min-height: 156px;
+    }
+
+    @media (min-width: $desktopSmall) {
+      padding: 28px;
+      margin-bottom: $marginRightDesktop;
+      min-height: 204px;
+    }
+
+    @media (min-width: $desktopMedium) {
+      margin-bottom: $marginRightDesktopMedium;
+      min-height: 280px;
+      padding: 40px;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Wrapper {
+  padding-bottom: 100px;
+  position: relative;
+
+  margin: 80px auto 100px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: calc(100% - 32px);
+    height: 1px;
+    background: $red;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: $desktopMedium) {
+    padding-bottom: 80px;
+    margin: 80px auto;
+  }
+
+  @media (max-width: $desktopSmall) {
+    padding-bottom: 60px;
+    margin: 60px auto;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 40px;
+    margin: 40px auto;
+  }
+
+  @media (max-width: $tabletSmall) {
+    padding-bottom: 32px;
+    margin: 32px auto;
+  }
+}
+
+.Help {
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+
+  .Button {
+    min-width: 208px;
+  }
+
+  @media (max-width: $desktopSmall) {
+    padding: 60px;
+
+    .Button {
+      min-width: 160px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 40px;
+  }
+
+  @media (max-width: $tabletSmall) {
+    padding: 28px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding: 24px;
+  }
+
+  @media (max-width: $tabletSmall - 1px) {
+   flex-wrap: wrap;
+  }
+}
+
+.Left {
+  max-width: 412px;
+  margin-right: 40px;
+}
+
+.Title {
+  color: $secondary;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  margin: 0 0 20px;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: $tabletSmall) {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+.Text {
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+  margin: 0;
+
+  @media (max-width: $tabletSmall) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $tabletSmall - 1px) {
+    margin-bottom: 20px;
+  }
+}
+
+.Divider {
+  width: 100%;
+  background: $red;
+  height: 1px;
+  margin: 100px 0;
+}

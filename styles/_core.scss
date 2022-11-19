@@ -1,0 +1,58 @@
+@import "mixins";
+@import "variables";
+
+html {
+  min-height: 100%;
+  //width: 100vw;
+  //overflow: overlay;
+  //overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+ width: 6px;
+ opacity: 1;
+ background-color: transparent;
+}
+//
+/* Track */
+::-webkit-scrollbar-track {
+ background: rgba(0, 0, 0, .3);
+ border-radius: 3px;
+}
+//
+///* Handle */
+::-webkit-scrollbar-thumb {
+ background: rgba(38, 38, 38, .5);
+ border-radius: 3px;
+}
+//
+///* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+ background: #555;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  min-width: 320px;
+  background: url("/assets/img/bg-mobile.webp") #fff repeat;
+
+  @media (min-width: $tabletSmall) {
+    background-image: url("/assets/img/bg-tablet-small.webp");
+  }
+
+  @media (min-width: $desktopSmall) {
+    background-image: url("/assets/img/bg-desktop.webp");
+  }
+
+  > svg {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

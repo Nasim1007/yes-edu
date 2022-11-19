@@ -1,0 +1,125 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Wrapper {
+  @media (max-width: $mobileLarge) {
+    @include wrapper {
+      @media (max-width: $mobileLarge) {
+        margin: 20px auto 40px;
+      }
+    }
+  }
+}
+
+.HeadPage {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    //background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: rgba(0, 0, 0, .5);
+  }
+
+  @media (max-width: $desktopMedium) {
+    height: 509px;
+  }
+
+  @media (max-width: $desktopSmall) {
+    height: 400px;
+  }
+
+  @media (max-width: $tablet) {
+    height: 320px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    height: 240px;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 360px) {
+    height: 200px;
+  }
+
+}
+
+.Img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.Info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 120px;
+  z-index: 2;
+
+  @media (max-width: $desktopMedium) {
+    bottom: 126px;
+  }
+
+  @media (max-width: $desktopSmall) {
+    bottom: 87px;
+  }
+
+  @media (max-width: $tablet) {
+    bottom: 47px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    position: static;
+  }
+}
+
+.Title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 24px;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    margin-bottom: 0;
+  }
+}
+
+.Description {
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+  max-width: 326px;
+  margin: 0;
+
+  @media (max-width: $mobileLarge) {
+    @include visually-hidden;
+  }
+}

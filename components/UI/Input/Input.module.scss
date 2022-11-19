@@ -1,0 +1,100 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.InputWrap {
+  width: 100%;
+  position: relative;
+  //height: 55px;
+  margin: 2px 0;
+}
+
+.Label {
+  position: absolute;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  color: #9FA3A9;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  //transition: top, color .2s;
+  transition-property: top, color, font-size;
+  transition-duration: 250ms;
+  pointer-events: none;
+}
+
+.ActiveLabel {
+  top: 12px;
+  font-size: 13px;
+  color: #9FA3A9;
+}
+
+.Input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 55px;
+  border: none;
+  outline: 1px solid #E7E8E9;
+  border-radius: 8px;
+  //transition: all .5s;
+  //transition-property: outline;
+  //transition-duration: .5s;
+  padding: 10px 16px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+  &.Error {
+    outline-color: $red;
+
+    &:hover,
+    &:focus {
+      outline-color: $red;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    //outline-width: 2px;
+
+    outline-color: $primary;
+  }
+
+  &:focus {
+    //+ label {
+    //  top: 10px;
+    //  font-size: 13px;
+    //  color: $black2;
+    //}
+  }
+
+  &:focus,
+  &:active {
+    outline-width: 2px;
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+}
+
+.ErrorMessage {
+  color: $red;
+  font-size: 11px;
+  line-height: 16px;
+  display: inline-block;
+  margin-top: 2px;
+
+  @media (min-width: $tabletSmall) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

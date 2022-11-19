@@ -1,0 +1,36 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Wrapper {
+  margin: 80px auto;
+
+  @media (max-width: $desktopSmall) {
+    margin: 60px auto;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 28px auto;
+  }
+}
+
+.Video {
+  border-radius: 12px;
+  background-color: #d9d9d9;
+
+  &::after {
+    background: rgba(0, 0, 0, .2) !important;
+    height: 100% !important;
+    box-sizing: border-box;
+  }
+
+  //@media (min-width: $desktopSmall) {
+  //  height: 600px;
+  //  width: 100%;
+  //  order: 1;
+  //  margin-bottom: 0;
+  //}
+}
+
+.PlayBtn {
+  @include playBtn;
+}

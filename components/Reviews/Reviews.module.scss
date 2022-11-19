@@ -1,0 +1,109 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.List {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 30.71%);
+  grid-column-gap: 3.92%;
+  justify-content: space-between;
+  grid-row-gap: 48px;
+
+  @media (max-width: $desktopSmall) {
+    grid-template-columns: repeat(2, 47.88%);
+    grid-row-gap: 48px;
+    grid-column-gap: 4.2%;
+  }
+
+  @media (max-width: $mobileLarge) {
+    display: none !important;
+  }
+}
+
+.Item {
+  background: #fff;
+  border: 1px solid $secondary;
+  border-radius: 12px;
+  padding: 40px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet) {
+    padding: 28px;
+  }
+}
+
+.Text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: $black2;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.Bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 28px;
+
+  @media (max-width: $tablet) {
+    margin-top: 24px;
+  }
+}
+
+.Avatar {
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  margin-right: 20px;
+  object-fit: cover;
+
+  @media (max-width: $tablet) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.Author {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.Job {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(68, 68, 68, 0.8);
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,86 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Card {
+  position: relative;
+}
+
+.Name {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: $primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tabletSmall) {
+    font-size: 16px;
+    line-height: 24px;
+    color: $primary;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 428px) {
+    @include fluid-type(320px, 428px, 10px, 14px);
+    line-height: 1.4;
+  }
+}
+
+.Icon {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+
+  @media (min-width: $tabletSmall) {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    bottom: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktopSmall) {
+    bottom: 28px;
+    right: 28px;
+  }
+
+  @media (min-width: $desktopMedium) {
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.Action {
+  display: none;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: $black2;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  @media (min-width: $desktopSmall) {
+    bottom: 32px;
+    left: 32px;
+  }
+
+  @media (min-width: $desktopMedium) {
+    bottom: 40px;
+    left: 40px;
+  }
+}

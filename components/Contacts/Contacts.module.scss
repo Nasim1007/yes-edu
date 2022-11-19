@@ -1,0 +1,212 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Wrapper {
+  margin: 80px auto;
+
+  @media (max-width: $desktopSmall) {
+    margin: 60px auto;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 28px auto 40px;
+  }
+
+  @media (max-width: $tabletSmall) {
+    margin: 24px auto 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin: 20px auto 40px;
+  }
+}
+
+.Hidden {
+  @include visually-hidden;
+}
+
+.List {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 360px));
+  justify-content: space-between;
+  grid-row-gap: 72px;
+
+  @media (max-width: $desktopMedium) {
+    grid-template-columns: repeat(3, 31%);
+    grid-row-gap: 48px;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(3, 31.3%);
+    grid-row-gap: 20px;
+  }
+
+  @media (max-width: $tabletSmall - 1px) {
+    grid-template-columns: repeat(2, 49%);
+    grid-row-gap: 10px;
+  }
+
+  @media (max-width: 427px) {
+    //grid-template-columns: 1fr;
+  }
+}
+
+.Link {
+  display: block;
+  padding: 40px 40px 40px 128px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  @media (max-width: $desktopSmall) {
+    padding: 20px 20px 20px 80px;
+
+    &::before {
+      left: 20px;
+      top: 20px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 16px 16px 16px 60px;
+
+    &::before {
+      width: 28px;
+      height: 28px;
+      left: 16px;
+      top: 16px;
+    }
+  }
+
+  @media (max-width: $tabletSmall) {
+    padding-left: 56px;
+  }
+}
+
+.Contact {
+
+  a {
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &::before {
+    background-image: url("/assets/icons/contacts.svg");
+  }
+}
+
+.Address {
+  &::before {
+    background-image: url("/assets/icons/address.svg");
+  }
+}
+
+.Orient {
+  &::before {
+    background-image: url("/assets/icons/panel.svg");
+  }
+}
+
+.Instagram {
+  &::before {
+    background-image: url("/assets/icons/instagram.svg");
+  }
+}
+
+.Telegram {
+  &::before {
+    background-image: url("/assets/icons/telegram.svg");
+  }
+}
+
+.Facebook {
+  &::before {
+    background-image: url("/assets/icons/facebook.svg");
+  }
+}
+
+.Title {
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: $primary;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: $tabletSmall) {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.Info {
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+  color: $black;
+
+  a {
+    color: $black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 12px;
+    line-height: 16px;
+    color: $black2;
+
+    a {
+      color: $black2;
+    }
+  }
+
+  @media (max-width: $tabletSmall) {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.066px;
+  }
+}

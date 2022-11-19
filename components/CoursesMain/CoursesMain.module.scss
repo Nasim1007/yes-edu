@@ -1,0 +1,67 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.Courses {
+  margin: 80px 0 100px;
+
+  @media (max-width: $desktopMedium) {
+    margin: 80px 0;
+  }
+
+  @media (max-width: $desktopSmall) {
+    margin: 60px 0;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 40px 0;
+  }
+
+  @media (max-width: $tabletSmall) {
+    margin: 40px 0 32px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin: 40px 0 20px;
+  }
+
+  .Title {
+    margin: 0 0 40px;
+
+    @media (max-width: $desktopMedium) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: $desktopSmall) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: $tabletSmall) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $mobileLarge) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.List {
+  .Card {
+    @media (max-width: $tabletSmall - 1px) {
+      &:nth-of-type(6) {
+        display: none;
+      }
+    }
+  }
+}
+.Courses{
+  h2{
+    margin: 40px 0;
+    text-align: center;
+    color: $secondary;
+  }
+}
