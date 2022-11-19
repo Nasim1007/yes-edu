@@ -18,6 +18,7 @@ function Vacancies({vacancyList}: VacanciesProps) {
         <ul className={classes.List}>
           {vacancyList.map(vacancy => (
             <VacancyCard
+            key={vacancy.id}
               {...vacancy}
             />
           ))}
