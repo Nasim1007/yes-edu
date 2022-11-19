@@ -52,7 +52,7 @@ export const courseList: ICourse[] = [
   {
     id: 9,
     name: 'Программа 3 в 1',
-    icon: '/assets/icons/webinar.png',
+    icon: '/assets/icons/webinar.svg',
     type: 'Подготовительные курсы'
   },
   // {
