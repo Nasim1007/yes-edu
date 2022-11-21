@@ -1,7 +1,7 @@
 import classes from './Modal.module.scss'
 import { ReactNode } from 'react'
 import { Transition } from 'react-transition-group'
-import { useWindowSize } from 'usehooks-ts'
+import { useLockedBody, useWindowSize } from 'usehooks-ts'
 import { HandySvg } from 'handy-svg'
 import clsx from 'clsx'
 
@@ -40,6 +40,10 @@ function Modal({children, isOpen, onClose, onDidUnmount, className}: ModalProps)
       transform: `translate3d(${isMobile ? '0' : '-50%'}, ${isMobile ? '100%' : '-100%'}, 0)`,
       top: isMobile ? 'auto' : '0'
     },
+  }
+
+  if (isOpen) {
+    useLockedBody()
   }
 
   const transitionBackdrop: any = {
