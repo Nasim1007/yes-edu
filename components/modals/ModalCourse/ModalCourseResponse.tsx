@@ -1,11 +1,11 @@
-import classes from './ModalCourse.module.scss'
+import classes from '../Modal.module.scss'
 import { useAppDispatch, useAppSelector } from '../../../store/hooks'
 import Button from '../../UI/Button/Button'
 import { clearState, closeLeadModal } from '../../../store/reducers/leadSlice'
 import Loader from '../../UI/Loader/Loader'
 
 function ModalCourseResponse() {
-  const {status} = useAppSelector(state => state.lead)
+  const { status } = useAppSelector(state => state.lead)
   const dispatch = useAppDispatch()
 
   return (
@@ -13,7 +13,7 @@ function ModalCourseResponse() {
       <div className={classes.Wrapper}>
 
         {status === 'pending' ? (
-          <Loader/>
+          <Loader />
         ) : status === 'fulfilled' ? (
           <div>
             <img
