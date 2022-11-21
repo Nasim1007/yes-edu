@@ -18,13 +18,13 @@ interface MainSliderProps {
 function MainSlider({slides}: MainSliderProps) {
   const modalRef = useRef<any>(null)
   const settings = {
-    dots: false,
+
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    fade: true
+  
   }
 
   if (!slides) return null
