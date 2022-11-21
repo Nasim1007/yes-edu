@@ -132,7 +132,7 @@ function ModalVacan({ vacancies }: ModalVacancyProps) {
                             type="submit"
                             className={classes.Button}
                         >
-                            Записаться
+                           отправить заявку
                         </Button>
                     </form>
                 </>
