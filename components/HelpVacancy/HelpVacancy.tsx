@@ -1,8 +1,12 @@
 import Button from '../UI/Button/Button'
 import Wrapper from '../UI/Wrapper/Wrapper'
 import classes from './HelpVacancy.module.scss'
+import { useAppDispatch } from '../../store/hooks'
+import { openResume } from '../../store/reducers/leadSlice'
+
 
 export default function HelpVacancy() {
+  const dispatch = useAppDispatch()
   return (
     <Wrapper tagName="section" className={classes.Wrapper}>
       <div className={classes.Help}>
@@ -16,6 +20,7 @@ export default function HelpVacancy() {
             color="primary"
             background="transparent"
             border="primary"
+            onClick={() => dispatch(openResume())}
           >
             Отправить резюме
           </Button>

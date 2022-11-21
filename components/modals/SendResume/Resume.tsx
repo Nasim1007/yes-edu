@@ -4,29 +4,28 @@ import Input from '../../UI/Input/Input'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import Button from '../../UI/Button/Button'
 import { useAppDispatch, useAppSelector } from '../../../store/hooks'
-import { clearState, closeLeadModal, sendVacan } from '../../../store/reducers/leadSlice'
-import { ICourse } from '../../../models/ICourse'
+import { clearState, closeLeadModal, sendResume } from '../../../store/reducers/leadSlice'
 import { normalizePhoneNumber } from '../../../utils/helpers/formatNumber'
 import { validatePhoneNumberLength } from 'libphonenumber-js'
 import ModalCourseResponse from '../ModalCourse/ModalCourseResponse'
-import Loader from '../../UI/Loader/Loader'
 import { useRouter } from 'next/router'
-import { IVacancy } from '../../../models/IVacancy'
+import { useState } from 'react'
 
 type Inputs = {
     fullName: string,
     contact: string,
-    vacan: string
+    file: any
 }
 
-interface ModalVacancyProps {
-    vacancies: IVacancy[]
-}
 
-function ModalVacan({ vacancies }: ModalVacancyProps) {
-    const { isOpenVacan, status, selectedVacan } = useAppSelector(state => state.lead)
+function Resume() {
+    const { isResume, status} = useAppSelector(state => state.lead)
     const dispatch = useAppDispatch()
     const router = useRouter()
+    const [file, setFile] = useState(null)
+    const handleLoad = (e: any) => {
+        setFile(e.target.files[0])
+    }
 
     const {
         register,
@@ -42,22 +41,22 @@ function ModalVacan({ vacancies }: ModalVacancyProps) {
     })
 
     const onSubmit: SubmitHandler<Inputs> = data => {
-        dispatch(sendVacan({
+        dispatch(sendResume({
             firstName: data.fullName,
             phone: data.contact,
-            vacan: data.vacan
+            file: file
         }))
     }
 
     return (
         <Modal
             className={classes.Modal}
-            isOpen={isOpenVacan}
+            isOpen={isResume}
             onClose={() => dispatch(closeLeadModal())}
             onDidUnmount={() => {
                 reset()
                 dispatch(clearState())
-                if (router.query?.vacan) {
+                if (router.query?.resume) {
                     router.replace(router.pathname)
                 }
 
@@ -100,33 +99,11 @@ function ModalVacan({ vacancies }: ModalVacancyProps) {
                                 validate: (value) => (
                                     (validatePhoneNumberLength(value, 'TJ')) ? 'Некорректный номер' : true
                                 )
-                                // onChange(event) {
-                                //   event.target.value = formatNumber(event.target.value)
-                                // }
                             })}
                         />
+
                         <div>
-                            <div className={classes.SelectWrapper}>
-                                <select
-                                    className={classes.Select}
-                                    {...register('vacan', {
-                                        required: {
-                                            message: 'Vacancie',
-                                            value: true
-                                        },
-                                    })}
-                                >
-                                    <option className={classes.Option} value="" disabled selected hidden>Выберите вакансия</option>
-                                    {vacancies.map(vacan => (
-                                        <option
-                                            selected={selectedVacan === vacan.id || false}
-                                            key={vacan.id}
-                                            value={vacan.name}
-                                        >{vacan.name}</option>
-                                    ))}
-                                </select>
-                            </div>
-                            {errors.vacan && <small className={classes.ErrorMessage}>{errors.vacan.message}</small>}
+                        <input className={classes.File} type='file' onChange={handleLoad}/>
                         </div>
                         <Button
                             type="submit"
@@ -143,4 +120,4 @@ function ModalVacan({ vacancies }: ModalVacancyProps) {
     )
 }
 
-export default ModalVacan
+export default Resume

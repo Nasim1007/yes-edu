@@ -45,9 +45,8 @@
 
 .SecondaryBg {
   background: $secondary;
-
   &:hover {
-    background: #FCBF24;
+    background: #FCBF24 !important;
   }
 }
 
@@ -64,9 +63,9 @@
 .PrimaryColor {
   color: $primary;
 
-  &:hover {
-    outline: 2px solid $secondary;
-  }
+  // &:hover {
+  //   outline: 2px solid $secondary;
+  // }
 }
 
 .SecondaryColor {

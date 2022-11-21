@@ -9,6 +9,7 @@ import { useAppDispatch } from '../../store/hooks'
 import { openLeadModal, openVacanModal } from '../../store/reducers/leadSlice'
 import ModalVacan from '../modals/ModalVacancie/ModalVacancie'
 import { IVacancy } from '../../models/IVacancy'
+import Resume from '../modals/SendResume/Resume'
 
 
 interface LayoutProps {
@@ -38,6 +39,7 @@ function Layout({ children, courses, vacancies }: LayoutProps) {
 
       <ModalCourse courses={courses} />
       <ModalVacan vacancies={vacancies} />
+    <Resume/>
     </>
   )
 }

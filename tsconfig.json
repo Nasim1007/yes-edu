@@ -23,6 +23,6 @@
       "@data/*": ["./src/data/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/Contacts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/Contacts", "components/modals/SendResume"],
   "exclude": ["node_modules"]
 }

@@ -10,3 +10,8 @@ export interface IVacan {
   phone: string
   vacan: string
 }
+export interface IFile {
+  firstName: string
+  phone: string
+  file: any
+}
