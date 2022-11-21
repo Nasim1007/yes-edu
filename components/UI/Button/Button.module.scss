@@ -24,9 +24,9 @@
     font-size: 12px;
   }
 
-  &:focus {
-    outline: 2px solid $secondary;
-  }
+  // &:focus {
+  //   outline: 2px solid $secondary;
+  // }
 }
 
 
@@ -75,10 +75,10 @@
 .BlackColor {
   color: $black;
 
-  &:active,
-  &:focus {
-    outline: 2px solid $secondary;
-  }
+  // &:active,
+  // &:focus {
+  //   background: #43B6FF;
+  // }
 }
 
 // Border

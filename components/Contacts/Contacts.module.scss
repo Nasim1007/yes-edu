@@ -65,6 +65,10 @@
   text-decoration: none;
   color: inherit;
   overflow: hidden;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+  }
 
   &::before {
     content: "";
