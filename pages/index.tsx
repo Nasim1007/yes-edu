@@ -3,17 +3,10 @@ import About from '../components/About/About'
 import Contacts from '../components/Contacts/Contacts'
 import CoursesMain from '../components/CoursesMain/CoursesMain'
 import Gallery from '../components/Gallery/Gallery'
-import Partners from '../components/Partners/Partners'
-import Reviews from '../components/Reviews/Reviews'
 import HelpCourse from '../components/HelpCourse/HelpCourse'
-import { courseList } from '../data/courseList'
 import MainSlider from '../components/MainSlider/MainSlider'
 import AboutVideo from '../components/AboutVideo/AboutVideo'
-import { reviewList } from '../data/reviewList'
 import ReviewClients from '../components/ReviewClients/ReviewClients'
-import { partnerList } from '../data/partnerList'
-import { mainSlides } from '../data/mainSlides'
-import { photos } from '../data/photos'
 import { ISlide } from '../models/ISlide'
 import { ICourse } from '../models/ICourse'
 import { IPicture } from '../models/IPicture'
@@ -37,8 +30,7 @@ export async function getServerSideProps() {
       mainSlides,
       courseList,
       gallery,
-      reviews,
-      partners
+      reviews
     },
   }
 }
@@ -67,7 +59,6 @@ export default function HomePage({mainSlides, courseList, gallery, reviews, part
       <AboutVideo/>
       <Contacts/>
       <ReviewClients reviews={reviews}/>
-      <Partners partnerList={partners}/>
     </>
   )
 }

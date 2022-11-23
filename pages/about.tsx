@@ -21,8 +21,7 @@ export async function getServerSideProps() {
   return {
     props: {
       gallery,
-      reviews,
-      partners
+      reviews
     },
   }
 }
@@ -52,7 +51,6 @@ export default function AboutPage({reviews, partners, gallery}: AboutPageProps) 
       <About/>
       <Gallery photos={gallery}/>
       <ReviewClients reviews={reviews}/>
-      <Partners partnerList={partners}/>
     </>
   )
 }
