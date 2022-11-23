@@ -25,6 +25,9 @@ $marginRightDesktopMedium: 2.8%;
     transition-duration: 300ms;
     position: relative;
     overflow: hidden;
+    @media (max-width: 640px){
+      padding: 10px !important;
+    }
 
     &:hover {
       box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
