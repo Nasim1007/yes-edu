@@ -11,7 +11,6 @@
   color: $primary;
   font-weight: 700;
   font-size: 14px;
-
   @media (min-width: $tabletSmall) {
     font-size: 16px;
     line-height: 24px;
@@ -25,7 +24,7 @@
 
   @media (max-width: 428px) {
     @include fluid-type(320px, 428px, 10px, 14px);
-    line-height: 1.4;
+    line-height: 1.2;
   }
 }
 
