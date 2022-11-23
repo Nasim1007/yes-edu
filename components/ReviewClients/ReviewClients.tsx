@@ -17,7 +17,7 @@ function ReviewClients({reviews}: ReviewClientsProps) {
     <section className={classes.Section}>
       <Wrapper>
         <H3 tagName="h2" className={classes.Title}>Отзывы</H3>
-        <H2 tagName="h3" className={classes.Subtitle}>Что о нас говорят</H2>
+        <H2 tagName="h3" className={classes.Subtitle}>Отзывы от наших учащихся</H2>
         <Reviews reviews={reviews}/>
       </Wrapper>
     </section>
