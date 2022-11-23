@@ -15,22 +15,18 @@ export const courseList: ICourse[] = [
   },
   {
     id: 3,
-    name: 'Химия',
-    icon: '/assets/icons/chemistry.svg',
-    type: 'Подготовительные курсы'
-  },
-  {
-    id: 4,
-    name: 'Алгебра',
-    icon: '/assets/icons/calc.svg',
-    type: 'Подготовительные курсы'
-  },
-  {
-    id: 5,
     name: 'Немецкий язык',
     icon: '/assets/icons/germany.svg',
     type: 'Языковые курсы'
   },
+
+  {
+    id: 4,
+    name: 'Подготовка к Мед университету',
+    icon: '/assets/icons/chemistry.svg',
+    type: 'Подготовительные курсы'
+  },
+
   {
     id: 6,
     name: 'Дошкольная подготовка',
@@ -43,22 +39,39 @@ export const courseList: ICourse[] = [
     icon: '/assets/icons/test.svg',
     type: 'Подготовительные курсы'
   },
-  {
-    id: 8,
-    name: 'Китайский язык',
-    icon: '/assets/icons/china.svg',
-    type: 'Языковые курсы'
-  },
+
   {
     id: 9,
     name: 'Программа 3 в 1',
     icon: '/assets/icons/webinar.png',
-    type: 'Подготовительные курсы'
+    type: 'Подготовительные курсы',
+    info: 'Английский, русский и математика',
+    student: 'Для детей от 7до 15 лет'
+
   },
+  // {
+  //   id: 8,
+  //   name: 'Китайский язык',
+  //   icon: '/assets/icons/china.svg',
+  //   type: 'Языковые курсы'
+  // },
+
   // {
   //   id: 10,
   //   name: 'Программа 3 в 1 (2)',
   //   icon: '/assets/icons/united-kingdom.svg',
+  //   type: 'Подготовительные курсы'
+  // },
+  // {
+  //   id: 4,
+  //   name: 'Алгебра',
+  //   icon: '/assets/icons/calc.svg',
+  //   type: 'Подготовительные курсы'
+  // },
+  // {
+  //   id: 3,
+  //   name: 'Химия',
+  //   icon: '/assets/icons/chemistry.svg',
   //   type: 'Подготовительные курсы'
   // },
 

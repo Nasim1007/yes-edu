@@ -3,4 +3,6 @@ export interface ICourse {
   name: string
   icon: string
   type: string
+  info?: string
+  student?: string
 }

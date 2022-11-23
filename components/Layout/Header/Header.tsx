@@ -25,8 +25,8 @@ function Header() {
           <img
             src="/assets/img/logo.png"
             alt="Yes edu"
-            width={80}
-            height={64}
+            width={104}
+            height={84}
           />
         </Link>
         <Navigation

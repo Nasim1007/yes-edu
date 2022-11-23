@@ -9,7 +9,7 @@ interface CourseCardProps extends ICourse {
   className?: string
 }
 
-function CourseCard({name, id, icon, className}: CourseCardProps) {
+function CourseCard({name, id, icon, className, info, student}: CourseCardProps) {
   const dispatch = useAppDispatch()
 
   return (
@@ -19,6 +19,10 @@ function CourseCard({name, id, icon, className}: CourseCardProps) {
       onClick={() => dispatch(openLeadModal(id))}
     >
       <h3 className={classes.Name} title={name}>{name}</h3>
+      <div className={classes.Info}>
+      { info && <h4>В программу входят: {info}</h4>}
+      { student && <h4>{student}</h4>}
+      </div>
       {icon.lastIndexOf('.png') !== -1 ? (
         <img
           className={classes.Icon}
