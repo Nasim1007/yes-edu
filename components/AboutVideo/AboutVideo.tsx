@@ -9,7 +9,7 @@ function AboutVideo() {
       {/*<div className={classes.VideoWraoo}>*/}
       <LiteYouTubeEmbed
         wrapperClass={`${classes.Video} yt-lite`}
-        id="mg5r4_yjGNY"
+        id="EC4aoW2VNBE"
         title="Yes edu"
         noCookie={true}
         playerClass={classes.PlayBtn}
