@@ -120,10 +120,19 @@ export const sendResume = createAsyncThunk('lead/sendLead', async (form: IFile) 
   message += `<b>Дата: ${new Date().toLocaleString()}</b>\n`
   message += `<b>Тип устройства: ${device}</b>`
   
-  const formdata = new FormData()
-  formdata.append('chat_id', CHAT_ID)
-  formdata.append('document', file)
+  
+  const fileType = file.name.slice(file.name.lastIndexOf('.'))
+  
 
+  const filename = `Resume-${firstName}${fileType}`
+  const formdata = new FormData()
+  
+  formdata.append('chat_id', CHAT_ID) 
+  formdata.append('document', file, filename)
+  console.log(file);
+  
+  
+// console.log(file.name)
   try {
     await axios.post(URL_API2, {
       chat_id: CHAT_ID,

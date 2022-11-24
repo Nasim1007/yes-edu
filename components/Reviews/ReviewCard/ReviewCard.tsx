@@ -21,7 +21,7 @@ function ReviewCard({id, text, author, tagName: Tag = 'li'}: ReviewCardProps) {
           height={56}
         />
         <div className={classes.AuthorAndJob}>
-          <p className={classes.Author}>{author.name}</p>
+          <p className={classes.Author} title={author.name}>{author.name}</p>
           <p className={classes.Job}>{author.job}</p>
         </div>
       </div>
