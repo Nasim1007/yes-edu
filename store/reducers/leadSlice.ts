@@ -2,8 +2,6 @@ import { IFile } from './../../models/ILead';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { ILead, IVacan } from '../../models/ILead'
 import axios from 'axios'
-import { ICourse } from '../../models/ICourse'
-
 
 interface LeadState {
   isOpen: boolean
