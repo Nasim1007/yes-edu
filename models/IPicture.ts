@@ -1,5 +1,4 @@
 export interface IPicture {
-  jpg: string
-  webp?: string
+ img: string
   title?: string
 }
