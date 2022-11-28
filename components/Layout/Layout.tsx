@@ -1,5 +1,5 @@
 import classes from './Layout.module.scss'
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useEffect } from 'react'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import ModalCourse from '../modals/ModalCourse/ModalCourse'
