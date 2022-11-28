@@ -7,6 +7,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: [
+      "backend.yesedu.tj"
+    ]
+  }
 }
 
 module.exports = withBundleAnalyzer(nextConfig)

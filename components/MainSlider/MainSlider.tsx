@@ -1,7 +1,6 @@
 import classes from './MainSlider.module.scss'
 import Wrapper from '../UI/Wrapper/Wrapper'
 import Slider from 'react-slick'
-import { mainSlides } from '../../data/mainSlides'
 import Button from '../UI/Button/Button'
 import 'slick-carousel/slick/slick.css'
 import clsx from 'clsx'
@@ -37,7 +36,7 @@ function MainSlider({slides}: MainSliderProps) {
           className={classes.Slider}
           {...settings}
         >
-          {slides.map(({link, description, img, title, id}) => (
+          {slides.map(({button_link, button_text, description, img, title, id}) => (
             <div key={id} className={classes.Slide}>
               <div className={classes.Left}>
                 <h3 className={classes.Title}>{HTMLReactParser(title)}</h3>
@@ -45,28 +44,20 @@ function MainSlider({slides}: MainSliderProps) {
                 <Button
                   className={classes.Button}
                   typeButton="link"
-                  href={link.href}
+                  href={button_link || '/'}
                   background="secondary"
                 >
-                  {link.name}
+                  {button_text}
                 </Button>
               </div>
               <div className={classes.Img}>
-                <picture>
-                  {img.webp && (
-                    <source
-                      type="image/webp"
-                      srcSet={img.webp}
-                    />
-                  )}
                   <Image
-                    src={img.jpg}
+                    src={img}
                     alt={title}
                     width={496}
                     height={604}
                     priority={true}
                   />
-                </picture>
               </div>
             </div>
           ))}

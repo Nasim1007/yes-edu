@@ -1,6 +1,13 @@
 import { ISlide } from '../../models/ISlide'
-import { mainSlides } from '../../data/mainSlides'
+import axios from 'axios'
+
 
 export async function fetchSlides(): Promise<ISlide[] | null> {
-  return mainSlides
+  try {
+    const {data} = await axios.get(`${process.env.API_URL}/slider`)
+    return data.data
+    
+  } catch (error) {
+    return null
+  }
 }

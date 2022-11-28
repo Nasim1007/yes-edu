@@ -109,7 +109,7 @@ function Resume() {
                             type="submit"
                             className={classes.Button}
                         >
-                            отправить резюме
+                            Отправить резюме
                         </Button>
                     </form>
                 </>

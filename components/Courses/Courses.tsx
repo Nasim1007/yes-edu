@@ -15,7 +15,7 @@ function Courses({courseList}: CoursesProps) {
   if (!courseList) return null
 
   // @ts-ignore
-  const courseTypes = ['Все курсы', ...new Set(courseList.map(course => course.type))]
+  const courseTypes = ['Все курсы', ...new Set(courseList.reverse().map(course => course.type))]
   
   return (
     <section className={classes.Section}>

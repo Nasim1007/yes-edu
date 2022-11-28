@@ -114,7 +114,7 @@ export const sendResume = createAsyncThunk('lead/sendLead', async (form: IFile) 
     device = 'Телефон'
 
   } else device = 'Компьютер'
-  let message = `<b>Заявка с сайта!</b>\n`
+  let message = `<b>Заявка на вакансию с резюме!</b>\n`
   message += `<b>Отправитель: </b> ${firstName}\n`
   message += `<b>Номер телефона:</b> ${phone.replace(/\s/g, '')}\n`
   message += `<b>Дата: ${new Date().toLocaleString()}</b>\n`
