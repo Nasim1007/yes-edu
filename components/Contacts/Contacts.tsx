@@ -53,7 +53,7 @@ const Contacts = () => {
           </li>
           <li className={classes.Item}>
 
-            <Link href="/" className={clsx(classes.Link, classes.Facebook)}>
+            <Link href="https://www.facebook.com/profile.php?id=100088047645151" className={clsx(classes.Link, classes.Facebook)}>
               <h3 className={classes.Title}>Facebook</h3>
               <span className={classes.Info}>Подпишитесь и <br/>будьте в курсе всех новостей</span>
             </Link>

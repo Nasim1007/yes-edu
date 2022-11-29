@@ -60,7 +60,7 @@ function Footer() {
             </a>
           </li>
           <li className={classes.SocialItem}>
-            <a href="#" title="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=100088047645151" target="_blank" title="Facebook">
               <img
                 src="/assets/icons/facebook.svg"
                 alt="Facebook"
