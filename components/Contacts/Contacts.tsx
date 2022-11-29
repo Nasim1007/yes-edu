@@ -13,38 +13,40 @@ const Contacts = () => {
             <div className={clsx(classes.Link, classes.Contact)}>
               <h3 className={classes.Title}>Контакты</h3>
               <span className={classes.Info}>
-                <a href="tel:+999900000000">
-                +999 900 00 00 00
+                <a href="tel:+992988780909">
+                988-78-09-09
               </a>
-              <a href="mailto:example@gmail.com">
-                example@gmail.com
+              <a href="tel: (48) 702-09-09">
+              (48) 702-09-09
+              </a>
+              <a href="mailto:yes.edu.tj@gmail.com">
+              yes.edu.tj@gmail.com
               </a>
               </span>
 
             </div>
           </li>
           <li className={classes.Item}>
-            <Link href="/" className={clsx(classes.Link, classes.Address)}>
+            <Link href="https://goo.gl/maps/SEqsPN74oDD3rQU77" target="_blank" className={clsx(classes.Link, classes.Address)}>
               <h3 className={classes.Title}>Адрес</h3>
               <span className={classes.Info}>Душанбе<br/> Айни 24А</span>
             </Link>
           </li>
           <li className={classes.Item}>
-
             <div className={clsx(classes.Link, classes.Orient)}>
               <h3 className={classes.Title}>Ориентир</h3>
               <span className={classes.Info}>Садбарг, здание<br/> Точиксодиродбанк</span>
             </div>
           </li>
           <li className={classes.Item}>
-            <Link href="/" className={clsx(classes.Link, classes.Instagram)}>
+            <Link href="https://instagram.com/yes.edu.tj?igshid=ZDdkNTZiNTM=" target="_blank" className={clsx(classes.Link, classes.Instagram)}>
               <h3 className={classes.Title}>Инстаграм</h3>
               <span className={classes.Info}>Подпишитесь и <br/>будьте в курсе всех новостей</span>
             </Link>
           </li>
           <li className={classes.Item}>
 
-            <Link href="/" className={clsx(classes.Link, classes.Telegram)}>
+            <Link href="https://t.me/yesedutj" target="_blank" className={clsx(classes.Link, classes.Telegram)}>
               <h3 className={classes.Title}>Telegram</h3>
               <span className={classes.Info}>Напшите нам!</span>
             </Link>
