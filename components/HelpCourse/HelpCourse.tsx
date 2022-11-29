@@ -17,7 +17,7 @@ export default function HelpCourse() {
             background="transparent"
             border="primary"
             typeButton="link"
-            href="tel:+992907005245"
+            href="tel:+992988780909"
           >
             Позвонить
           </Button>

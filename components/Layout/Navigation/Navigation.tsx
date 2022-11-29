@@ -108,7 +108,7 @@ function Navigation({isOpen, closeMenu}: NavigationProps) {
             <div className={classes.Buttons}>
               <Button
                 typeButton="link"
-                href="tel:+992907005245"
+                href="tel:+992988780909"
                 background="transparent"
                 color={pathname !== '/' ? 'white' : 'black'}
                 className={classes.CallButton}

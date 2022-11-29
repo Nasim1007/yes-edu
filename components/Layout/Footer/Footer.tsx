@@ -40,7 +40,7 @@ function Footer() {
         </ul>
         <ul className={classes.Social}>
           <li className={classes.SocialItem}>
-            <a href="#" title="Instagram">
+            <a href="https://instagram.com/yes.edu.tj?igshid=ZDdkNTZiNTM=" target="_blank" title="Instagram">
               <img
                 src="/assets/icons/instagram.svg"
                 alt="Instagram"
@@ -50,7 +50,7 @@ function Footer() {
             </a>
           </li>
           <li className={classes.SocialItem}>
-            <a href="#" title="Telegram">
+            <a href="https://t.me/yesedutj" target="_blank" title="Telegram">
               <img
                 src="/assets/icons/telegram.svg"
                 alt="Telegram"
