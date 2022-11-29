@@ -18,9 +18,17 @@ function Gallery({photos}: GalleryProps) {
         <H3 tagName="h2">Галерея</H3>
         <H2 tagName="h3">Мы в фотографиях</H2>
         <ul className={classes.List}>
-          {photos.map(({img, title}, index) =>
+          {/* {photos.map(({img, title}, index) =>
             <li key={index} className={classes.Item}>
               <picture>
+                <img className={classes.Img} src={img} alt={title || ''}/>
+              </picture>
+            </li>
+          )} */}
+           {photos.map(({img, title}, index) =>
+            <li key={index} className={classes.Item}>
+              <picture>
+                {/* <source type="image/webp" srcSet={img}/> */}
                 <img className={classes.Img} src={img} alt={title || ''}/>
               </picture>
             </li>
