@@ -99,9 +99,7 @@ function ModalCourse({ courses }: ModalCourseProps) {
                 validate: (value) => (
                   (validatePhoneNumberLength(value, 'TJ')) ? 'Некорректный номер' : true
                 )
-                // onChange(event) {
-                //   event.target.value = formatNumber(event.target.value)
-                // }
+          
               })}
             />
             <div>

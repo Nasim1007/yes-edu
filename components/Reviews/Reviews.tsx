@@ -16,8 +16,8 @@ export default function Reviews({reviews}: ReviewsProps) {
     <>
       <ReviewsMobile reviewList={reviews}/>
       <ul className={classes.List}>
-        {reviews.map(({id, text, author}) => (
-          <ReviewCard key={id} id={id} author={author} text={text}/>
+        {reviews.map(({id, text, author_name, author_img, author_job}) => (
+          <ReviewCard key={id} id={id} author_name={author_name} author_img={author_img} author_job={author_job} text={text}/>
         ))}
       </ul>
     </>

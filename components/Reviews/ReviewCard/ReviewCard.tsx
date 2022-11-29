@@ -6,7 +6,7 @@ interface ReviewCardProps extends IReview {
   tagName?: 'li' | 'div'
 }
 
-function ReviewCard({id, text, author, tagName: Tag = 'li'}: ReviewCardProps) {
+function ReviewCard({id, text, author_name, author_job, author_img, tagName: Tag = 'li'}: ReviewCardProps) {
   return (
     <Tag className={classes.Item}>
       <p className={classes.Text}>
@@ -15,14 +15,14 @@ function ReviewCard({id, text, author, tagName: Tag = 'li'}: ReviewCardProps) {
       <div className={classes.Bottom}>
         <Image
           className={classes.Avatar}
-          src={author.avatar}
-          alt={author.name}
+          src={author_img}
+          alt={author_name}
           width={56}
           height={56}
         />
         <div className={classes.AuthorAndJob}>
-          <p className={classes.Author} title={author.name}>{author.name}</p>
-          <p className={classes.Job}>{author.job}</p>
+          <p className={classes.Author} title={author_name}>{author_name}</p>
+          <p className={classes.Job}>{author_job}</p>
         </div>
       </div>
     </Tag>

@@ -4,9 +4,9 @@ import { Provider } from 'react-redux'
 import store from '../store/store'
 import Layout from '../components/Layout/Layout'
 import { ICourse } from '../models/ICourse'
-import { courseList } from '../data/courseList'
 import { IVacancy } from '../models/IVacancy'
-import { vacancyList } from '../data/vacancyList'
+import { fetchCourses } from '../utils/requests/fetchCourses'
+import { fetchVacancies } from '../utils/requests/fetchVacancies'
 
 interface AppState extends AppProps {
   courses: ICourse[]
@@ -24,9 +24,12 @@ function App({ Component, pageProps, courses, vacancies }: AppState) {
 }
 
 App.getInitialProps = async (ctx: any) => {
+  const courseList: ICourse[] | null = await fetchCourses()
+  const vacancies: IVacancy[] | null = await fetchVacancies()
+
   return {
     courses: courseList,
-    vacancies: vacancyList
+    vacancies
   }
 }
 

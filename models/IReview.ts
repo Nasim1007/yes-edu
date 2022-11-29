@@ -1,9 +1,8 @@
 export interface IReview {
   id: number
-  author: {
-    avatar: string
-    name: string
-    job?: string
-  }
+  author_name: string
+  author_job?: string
+  author_img: string
   text: string
+
 }
