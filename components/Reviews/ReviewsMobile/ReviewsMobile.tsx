@@ -43,7 +43,8 @@ function ReviewsMobile({reviewList}: ReviewsMobileProps) {
       className={classes.Slider}
       {...settings}
     >
-      {reviewList.map(review => (
+      {reviewList &&
+      reviewList.map(review => (
         <div key={review.id} className={classes.Slide}>
           <ReviewCard
             tagName="div"
