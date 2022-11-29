@@ -27,7 +27,6 @@ function Header() {
             alt="Yes edu"
             width={104}
             height={84}
-            className={classes.Logo}
           />
         </Link>
         <Navigation

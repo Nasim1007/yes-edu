@@ -29,21 +29,6 @@ function CourseCard({name, id, icon, className, info, student}: CourseCardProps)
           width={28}
           height={28}
         />
-      {/* {icon.lastIndexOf('.png') !== -1 ? (
-        <img
-          className={classes.Icon}
-          src={icon}
-          width={28}
-          height={28}
-        />
-      ) : (
-        <HandySvg
-          className={classes.Icon}
-          src={icon}
-          width={28}
-          height={28}
-        />
-      )} */}
       <span className={classes.Action}>Записаться</span>
     </article>
   )
