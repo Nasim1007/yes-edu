@@ -48,7 +48,7 @@ const Contacts = () => {
 
             <Link href="https://t.me/yesedutj" target="_blank" className={clsx(classes.Link, classes.Telegram)}>
               <h3 className={classes.Title}>Telegram</h3>
-              <span className={classes.Info}>Напшите нам!</span>
+              <span className={classes.Info}>Напишите нам!</span>
             </Link>
           </li>
           <li className={classes.Item}>

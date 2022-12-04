@@ -260,6 +260,9 @@
         order: 1;
         margin-left: 10px;
       }
+      &:hover{
+        border-color: $secondary;
+      }
     }
 
     .ToActionButton {

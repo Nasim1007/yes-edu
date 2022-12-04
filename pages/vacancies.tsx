@@ -17,8 +17,8 @@ export async function getServerSideProps() {
   return {
     props: {
       vacancies,
-      reviews,
-    },
+      reviews
+    }
   }
 }
 

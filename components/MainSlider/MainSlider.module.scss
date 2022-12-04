@@ -115,7 +115,9 @@
   margin: 0 0 48px;
   max-width: 624px;
   span{
-    color: $red;
+    @media (min-width: 481px) { 
+      color: $red
+    }
   }
 
   @media (max-width: $desktopMedium - 1px) {
