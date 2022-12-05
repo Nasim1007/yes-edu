@@ -8,6 +8,9 @@
   padding: 40px;
   box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (max-width: $tablet) {
     padding: 28px;

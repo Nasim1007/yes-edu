@@ -11,6 +11,7 @@ import { fetchReviewClients } from '../utils/requests/fetchReviews'
 import { IPartner } from '../models/IPartner'
 import { fetchPartners } from '../utils/requests/fetchPartners'
 import Head from 'next/head'
+import AboutVideo from '../components/AboutVideo/AboutVideo'
 
 
 export async function getServerSideProps() {
@@ -49,6 +50,7 @@ export default function AboutPage({reviews, partners, gallery}: AboutPageProps) 
       />
       <Contacts/>
       <About/>
+      <AboutVideo/>
       <Gallery photos={gallery}/>
       <ReviewClients reviews={reviews}/>
     </>

@@ -26,6 +26,7 @@ function MainSlider({slides}: MainSliderProps) {
   
   }
 
+
   if (!slides) return null
 
   return (
@@ -68,7 +69,10 @@ function MainSlider({slides}: MainSliderProps) {
           ))}
         </Slider>
         <div className={classes.Footer}>
+        {
+            (slides.length > 1) &&
           <div className={classes.Navigation}>
+
             <button
               className={clsx(classes.PrevArrow)}
               onClick={() => {
@@ -76,6 +80,8 @@ function MainSlider({slides}: MainSliderProps) {
               }}
               aria-label="Предыдущий слайд"
             >
+
+              
               <HandySvg
                 src="/assets/icons/arrow-left.svg"
                 width={12}
@@ -96,6 +102,8 @@ function MainSlider({slides}: MainSliderProps) {
               />
             </button>
           </div>
+            }
+
         </div>
       </Wrapper>
     </section>
