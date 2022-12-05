@@ -14,7 +14,7 @@ function CourseCard({name, id, icon, className, info, student, link}: CourseCard
   const dispatch = useAppDispatch()
   const router = useRouter()
 
-  const handleClick = (e) => {
+  const handleClick = (e: any) => {
     e.preventDefault()
     router.push('/courses')
   }
