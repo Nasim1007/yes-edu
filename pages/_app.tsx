@@ -7,6 +7,7 @@ import { ICourse } from '../models/ICourse'
 import { IVacancy } from '../models/IVacancy'
 import { fetchCourses } from '../utils/requests/fetchCourses'
 import { fetchVacancies } from '../utils/requests/fetchVacancies'
+import NextNProgress from 'nextjs-progressbar'
 
 interface AppState extends AppProps {
   courses: ICourse[]
@@ -16,6 +17,7 @@ interface AppState extends AppProps {
 function App({ Component, pageProps, courses, vacancies }: AppState) {
   return (
     <Provider store={store}>
+      <NextNProgress/>
       <Layout courses={courses} vacancies={vacancies}>
         <Component {...pageProps} />
       </Layout>

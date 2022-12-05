@@ -17,6 +17,7 @@ function Courses({courseList}: CoursesProps) {
 
   // @ts-ignore
   const courseTypes = ['Все курсы', ...new Set(courseList.map(course => course.type))]
+
   
   return (
     <section className={classes.Section}>

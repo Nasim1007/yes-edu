@@ -8,6 +8,7 @@ import { fetchReviewTeachers } from '../utils/requests/fetchReviews'
 import { IVacancy } from '../models/IVacancy'
 import { fetchVacancies } from '../utils/requests/fetchVacancies'
 import Head from 'next/head'
+import Advantages from '../components/Vacancies/Adventages/Advantages'
 
 
 export async function getServerSideProps() {
@@ -46,6 +47,7 @@ export default function VacanciesPage({vacancies, reviews}: VacanciesPageProps) 
       <Vacancies vacancyList={vacancies}/>
       <HelpVacancy/>
       <About/>
+      <Advantages/>
       <ReviewTeachers reviews={reviews}/>
     </>
   )

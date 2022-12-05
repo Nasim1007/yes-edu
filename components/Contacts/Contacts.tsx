@@ -29,13 +29,13 @@ const Contacts = () => {
           <li className={classes.Item}>
             <Link href="https://goo.gl/maps/SEqsPN74oDD3rQU77" target="_blank" className={clsx(classes.Link, classes.Address)}>
               <h3 className={classes.Title}>Адрес</h3>
-              <span className={classes.Info}>Душанбе<br/> Айни 24А</span>
+              <span className={classes.Info}>Душанбе<br/> Ул Борбад 1</span>
             </Link>
           </li>
           <li className={classes.Item}>
             <div className={clsx(classes.Link, classes.Orient)}>
               <h3 className={classes.Title}>Ориентир</h3>
-              <span className={classes.Info}>Садбарг, здание<br/> Точиксодиродбанк</span>
+              <span className={classes.Info}>Рядом с Fast food "Zanjabil Bro"</span>
             </div>
           </li>
           <li className={classes.Item}>

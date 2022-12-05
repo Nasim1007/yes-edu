@@ -4,19 +4,26 @@ import { HandySvg } from 'handy-svg'
 import clsx from 'clsx'
 import { useAppDispatch } from '../../../store/hooks'
 import { openLeadModal } from '../../../store/reducers/leadSlice'
+import { useRouter } from 'next/router'
 
 interface CourseCardProps extends ICourse {
   className?: string
 }
 
-function CourseCard({name, id, icon, className, info, student}: CourseCardProps) {
+function CourseCard({name, id, icon, className, info, student, link}: CourseCardProps) {
   const dispatch = useAppDispatch()
+  const router = useRouter()
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    router.push('/courses')
+  }
 
   return (
     <article
       className={clsx(classes.Card, className)}
       tabIndex={0}
-      onClick={() => dispatch(openLeadModal(id))}
+      onClick={link ? handleClick : () => dispatch(openLeadModal(id))}
     >
       <h3 className={classes.Name} title={name}>{name}</h3>
       <div className={classes.Info}>

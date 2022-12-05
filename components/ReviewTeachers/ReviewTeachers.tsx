@@ -14,7 +14,7 @@ function ReviewTeachers({reviews}: ReviewTeachersProps) {
     <section className={classes.Section}>
       <Wrapper>
         <H3 tagName="h2" className={classes.Title}>Отзывы</H3>
-        <H2 tagName="h3" className={classes.Subtitle}>Отызвы учителей</H2>
+        <H2 tagName="h3" className={classes.Subtitle}>Отзывы учителей</H2>
         <Reviews reviews={reviews}/>
       </Wrapper>
     </section>

@@ -20,7 +20,7 @@ import { fetchPartners } from '../utils/requests/fetchPartners'
 
 export async function getServerSideProps() {
   const mainSlides: ISlide[] | null = await fetchSlides()
-  const courseList: ICourse[] | null = await fetchCourses(6)
+  const courseList: ICourse[] | null = await fetchCourses(5)
   const gallery: IPicture[] | null = await fetchGallery()
   const reviews: IReview[] | null = await fetchReviewClients()
   const partners: IPartner[] | null = await fetchPartners()

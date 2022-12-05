@@ -41,6 +41,8 @@ function MainSlider({slides}: MainSliderProps) {
               <div className={classes.Left}>
                 <h3 className={classes.Title}>{HTMLReactParser(title)}</h3>
                 <p className={classes.Description}>{description}</p>
+                { 
+                  button_text &&
                 <Button
                   className={classes.Button}
                   typeButton="link"
@@ -49,6 +51,9 @@ function MainSlider({slides}: MainSliderProps) {
                 >
                   {button_text}
                 </Button>
+
+                }
+               
               </div>
               <div className={classes.Img}>
                   <Image
