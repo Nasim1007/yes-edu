@@ -38,8 +38,8 @@ export default function VacanciesPage({vacancies, reviews}: VacanciesPageProps) 
       </Head>
       <HeadPage
         img={{
-          jpg: '/assets/img/about.jpg',
-          webp: '/assets/img/about.webp',
+          jpg: '/assets/img/gallery5.jpg',
+          webp: '/assets/img/gallery5.webp',
         }}
         title="Вакансии"
         description="Любишь преподавать? Найди свое место в нашей компании!"
