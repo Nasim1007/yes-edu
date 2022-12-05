@@ -8,7 +8,6 @@ import { useRouter } from 'next/router'
 
 interface CourseCardProps extends ICourse {
   className?: string
-  link: boolean
 }
 
 function CourseCard({name, id, icon, className, info, student, link}: CourseCardProps) {

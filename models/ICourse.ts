@@ -5,4 +5,5 @@ export interface ICourse {
   type?: string
   info?: string
   student?: string
+  link?: boolean
 }
