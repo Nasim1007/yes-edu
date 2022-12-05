@@ -1,8 +1,8 @@
 export interface ICourse {
-  id: number
+  id?: number
   name: string
   icon: string
-  type: string
+  type?: string
   info?: string
   student?: string
 }
