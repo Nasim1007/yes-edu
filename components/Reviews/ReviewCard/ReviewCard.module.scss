@@ -82,9 +82,15 @@
   // color: rgba(68, 68, 68, 0.8);
   color: $primary;
   margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
   overflow: hidden;
+  display: -webkit-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -moz-box;
 
   @media (max-width: $tablet) {
     font-size: 14px;
