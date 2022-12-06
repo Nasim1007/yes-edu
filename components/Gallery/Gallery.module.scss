@@ -35,6 +35,8 @@
     grid-template-columns: repeat(3, 31.31%);
     grid-column-gap: 12px;
     grid-row-gap: 12px;
+  // grid-auto-rows: 25%;
+
   }
 }
 
@@ -42,9 +44,21 @@
   border-radius: 24px;
   overflow: hidden;
   max-height: 288px;
+  height: 100%;
 
   @media (max-width: $desktopMedium) {
     border-radius: 12px;
+    max-height: 250px;
+  }
+  @media (max-width: $desktopSmall) {
+    max-height: 220px;
+  }
+  @media (max-width: $tablet){
+    max-height: 160px;
+
+  }
+  @media (max-width: $mobileLarge) {
+    height: 130px;
   }
 }
 
