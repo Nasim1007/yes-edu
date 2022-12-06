@@ -59,33 +59,6 @@ export const GalleryModal = ({
 
             <SwiperSlide virtualIndex={index} className={classes.Slide}>
               <div
-                className={classes.Img}
-                onClick={(event) => {
-                  event.preventDefault();
-                  event.stopPropagation();
-                }}
-              >
-                <img src={img} alt={title || ""} />
-            
-              </div>
-            
-            </SwiperSlide>
-          ))}
-           
-        </Swiper>
-        <button
-                  className={classes.Close}
-                  onClick={() => setShowPicture(false)}
-                >
-                  <HandySvg
-                    src={"/assets/icons/close.svg"}
-                    width={30}
-                    height={30}
-                  />
-                  {/* x */}
-                </button>
-      </div>
-      <div
           slot="container-start"
           className={classes.Navigation}>
           <button
@@ -110,6 +83,35 @@ export const GalleryModal = ({
            />
           </button>
         </div>
+              <div
+                className={classes.Img}
+                onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }}
+              >
+                <img src={img} alt={title || ""} />
+                
+            
+              </div>
+            
+            </SwiperSlide>
+          ))}
+           
+        </Swiper>
+        <button
+                  className={classes.Close}
+                  onClick={() => setShowPicture(false)}
+                >
+                  <HandySvg
+                    src={"/assets/icons/close.svg"}
+                    width={30}
+                    height={30}
+                  />
+                  {/* x */}
+                </button>
+      </div>
+
  </>
     </CSSTransition>
   );
