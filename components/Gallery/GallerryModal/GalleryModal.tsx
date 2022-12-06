@@ -49,8 +49,8 @@ export const GalleryModal = ({photos, showPicture, setShowPicture, activeIndex}:
                 >
                 <HandySvg
                 src={"/assets/icons/close.svg"}
-                width={16}
-                height={16}
+                width={23}
+                height={23}
                 />
                 </button>
                 </div>

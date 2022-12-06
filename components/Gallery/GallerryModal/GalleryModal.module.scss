@@ -37,12 +37,18 @@
     z-index: 100;
     width: 23px;
     height: 23px;
-    background: rgba(255, 255, 255, 0.514);
+    background: rgba(128, 118, 118, 0.514);
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
+    svg{
+        &:hover{
+            fill: #fff;
+        }
+    }
+   
    
    }
 
