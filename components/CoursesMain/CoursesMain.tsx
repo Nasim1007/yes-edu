@@ -31,7 +31,7 @@ function CoursesMain({courseList}: CoursesMainProps) {
       <Wrapper className={classes.Wrapper}>
         <H2 className={classes.Title}>Наши курсы</H2>
         <Grid className={classes.List}>
-          {courseList.slice(0, 6).map(course => (
+          {courseList?.slice(0, 6).map(course => (
             <CourseCard
               key={course.id}
               className={classes.Card}

@@ -25,6 +25,7 @@
   grid-column-gap: 1.96%;
   grid-row-gap: 4%;
   justify-content: space-between;
+  // grid-auto-rows: 32%;
 
   @media (max-width: $desktopSmall) {
     grid-template-columns: repeat(4, 23.72%);
@@ -40,6 +41,7 @@
 .Item {
   border-radius: 24px;
   overflow: hidden;
+  max-height: 288px;
 
   @media (max-width: $desktopMedium) {
     border-radius: 12px;

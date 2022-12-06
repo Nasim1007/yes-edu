@@ -64,6 +64,7 @@ function MainSlider({slides}: MainSliderProps) {
                     height={604}
                     priority={true}
                   />
+                  <div></div>
               </div>
             </div>
           ))}

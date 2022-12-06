@@ -114,7 +114,7 @@ function ModalCourse({ courses }: ModalCourseProps) {
                   })}
                 >
                   <option className={classes.Option} value="" disabled selected hidden>Выберите курс</option>
-                  {courses.map(course => (
+                  {courses?.map(course => (
                     <option
                       selected={selectedCourse === course.id || false}
                       key={course.id}
