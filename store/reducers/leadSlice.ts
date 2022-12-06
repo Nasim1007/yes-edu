@@ -129,8 +129,6 @@ export const sendResume = createAsyncThunk('lead/sendLead', async (form: IFile) 
   formdata.append('document', file, filename)
   console.log(file);
   
-  
-// console.log(file.name)
   try {
     await axios.post(URL_API2, {
       chat_id: CHAT_ID,

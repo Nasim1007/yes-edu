@@ -41,6 +41,7 @@ export default function VacanciesPage({vacancies, reviews}: VacanciesPageProps) 
           jpg: '/assets/img/gallery5.jpg',
           webp: '/assets/img/gallery5.webp',
         }}
+        posIsTop={true}
         title="Вакансии"
         description="Любишь преподавать? Найди свое место в нашей компании!"
       />

@@ -1,0 +1,64 @@
+@import "styles/variables";
+
+.GalleryModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.315);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+
+}
+.Img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 5px;
+    img{
+        width: 100%;
+        max-width: 800px;
+        border-radius: 5px;
+    }
+}
+
+.Close{
+    position: absolute;
+    top: 10px;
+    right: 30px;       
+    z-index: 100;
+    width: 23px;
+    height: 23px;
+    background: rgba(255, 255, 255, 0.514);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+   
+   }
+
+.EnterActive {
+    animation: fadeIn .5s forwards;
+}
+
+.ExitActive {
+    animation: fadeIn .5s forwards alternate-reverse;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

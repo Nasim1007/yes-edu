@@ -8,9 +8,10 @@ interface HeadPageProps {
   }
   title: string
   description: string
+  posIsTop?: boolean
 }
 
-function HeadPage({img, title, description}: HeadPageProps) {
+function HeadPage({img, title, description, posIsTop = false}: HeadPageProps) {
   return (
     <div className={classes.Wrapper}>
       <div className={classes.HeadPage}>
@@ -24,6 +25,9 @@ function HeadPage({img, title, description}: HeadPageProps) {
           )}
           <img
             className={classes.Img}
+            style={{
+              objectPosition: posIsTop ? 'center' : 'bottom'
+            }}
             src={img.jpg}
             alt={title}
           />
