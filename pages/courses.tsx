@@ -44,7 +44,7 @@ export default function CoursesPage({courseList, reviews}: CoursesPageProps) {
           webp: '/assets/img/about.webp',
         }}
         title="Наши курсы"
-        description="Любишь преподавать? Найди свое место в нашей компании!"
+        description="Наши курсы помогут каждому построить сильную базу для достижения целей в будущем."
       />
       <Courses courseList={courseList}/>
       <HelpCourse/>

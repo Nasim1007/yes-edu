@@ -44,7 +44,7 @@ export default function VacanciesPage({
         }}
         posIsTop={true}
         title="Вакансии"
-        description="Любишь преподавать? Найди свое место в нашей компании!"
+        description="Любишь преподавать? Найди свое место в нашей команде!"
       />
       <Vacancies vacancyList={vacancies} />
       <HelpVacancy />

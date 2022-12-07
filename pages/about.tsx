@@ -46,7 +46,7 @@ export default function AboutPage({reviews, partners, gallery}: AboutPageProps) 
           webp: '/assets/img/about.webp',
         }}
         title="О нас"
-        description="Любишь преподавать? Найди свое место в нашей компании!"
+        description="Почему выбирают нас? Обучаем с 2009 года. Грамотные и строгие учителя."
       />
       <Contacts/>
       <About/>
