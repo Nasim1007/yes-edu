@@ -59,6 +59,20 @@ export const GalleryModal = ({
 
             <SwiperSlide virtualIndex={index} className={classes.Slide}>
               <div
+                className={classes.Img}
+                onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }}
+              >
+                <img src={img} alt={title || ""} />
+                
+            
+              </div>
+            
+            </SwiperSlide>
+          ))}
+            <div
           slot="container-start"
           className={classes.Navigation}>
           <button
@@ -83,20 +97,6 @@ export const GalleryModal = ({
            />
           </button>
         </div>
-              <div
-                className={classes.Img}
-                onClick={(event) => {
-                  event.preventDefault();
-                  event.stopPropagation();
-                }}
-              >
-                <img src={img} alt={title || ""} />
-                
-            
-              </div>
-            
-            </SwiperSlide>
-          ))}
            
         </Swiper>
         <button
