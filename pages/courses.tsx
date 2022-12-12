@@ -39,6 +39,7 @@ export default function CoursesPage({courseList, reviews}: CoursesPageProps) {
         <meta name="description" content="Наши курсы"/>
       </Head>
       <HeadPage
+      imgPosition='center'
         img={{
           jpg: '/assets/img/courses.jpg',
           // webp: '/assets/img/about.webp',

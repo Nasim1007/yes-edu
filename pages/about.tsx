@@ -41,6 +41,7 @@ export default function AboutPage({reviews, partners, gallery}: AboutPageProps) 
         <meta name="description" content="О нас"/>
       </Head>
       <HeadPage
+        imgPosition='bottom'
         img={{
           jpg: '/assets/img/aboutus.jpg',
           // webp: '/assets/img/about.webp',

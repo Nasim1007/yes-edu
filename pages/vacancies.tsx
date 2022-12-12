@@ -38,9 +38,10 @@ export default function VacanciesPage({
         <meta name="description" content="Вакансии" />
       </Head>
       <HeadPage
+      imgPosition="0 50%"
         img={{
-          jpg: "/video-poster.jpg",
-          webp: "/assets/img/photo_2022-12-06_07-20-10.jpg",
+          jpg: "/assets/img/yesedu-group.jpg",
+          // webp: "/assets/img/photo_2022-12-06_07-20-10.jpg",
         }}
         posIsTop={true}
         title="Вакансии"
