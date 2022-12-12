@@ -40,8 +40,8 @@ export default function CoursesPage({courseList, reviews}: CoursesPageProps) {
       </Head>
       <HeadPage
         img={{
-          jpg: '/assets/img/about.jpg',
-          webp: '/assets/img/about.webp',
+          jpg: '/assets/img/courses.jpg',
+          // webp: '/assets/img/about.webp',
         }}
         title="Наши курсы"
         description="Наши курсы помогут каждому построить сильную базу для достижения целей в будущем."

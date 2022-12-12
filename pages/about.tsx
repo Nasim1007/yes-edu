@@ -42,8 +42,8 @@ export default function AboutPage({reviews, partners, gallery}: AboutPageProps) 
       </Head>
       <HeadPage
         img={{
-          jpg: '/assets/img/about.jpg',
-          webp: '/assets/img/about.webp',
+          jpg: '/assets/img/aboutus.jpg',
+          // webp: '/assets/img/about.webp',
         }}
         title="О нас"
         description="Почему выбирают нас? Обучаем с 2009 года. Грамотные и строгие учителя."
