@@ -50,6 +50,15 @@ export default function HomePage({mainSlides, courseList, gallery, reviews, part
       <Head>
         <title>Yes Edu - Образовательный центр</title>
         <meta name="description" content="Описание"/>
+        <meta name="description" content="Образовательный цент YESedu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."></meta>
+        <meta name="keywords" content="Образовательный центр, 
+Изучения языков, 
+Быстрое изучение английского в Таджикистане, 
+Быстрое изучение русского в Душанбе, 
+Обучение, 
+Выучить русский в Душанбе, 
+Изучение языков в Душанбе,
+Образовательный центр в Душанбе"/>
       </Head>
       <MainSlider slides={mainSlides}/>
       <CoursesMain courseList={courseList}/>
