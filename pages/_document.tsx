@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
   return (
@@ -11,6 +12,19 @@ export default function Document() {
           <meta property="og:title" content="Образовательный цент Yes-Edu."/>
           <meta property="og:description" content="Образовательный цент Yes-Edu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."/>
           <meta property="og:image" content="/assets/android-chrome-192x192.png"/>
+             {/* Global Site Tag (gtag.js) - Google Analytics */}
+             <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-BCJ0LP0ZRC"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer  [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BCJ0LP0ZRC');
+        `}
+      </Script>
       </Head>
       <body>
       <Main/>
