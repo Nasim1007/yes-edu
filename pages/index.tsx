@@ -49,7 +49,6 @@ export default function HomePage({mainSlides, courseList, gallery, reviews, part
     <>
       <Head>
         <title>Yes Edu - Образовательный центр</title>
-        <meta name="description" content="Описание"/>
         <meta name="description" content="Образовательный цент YESedu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."></meta>
         <meta name="keywords" content="Образовательный центр, 
 Изучения языков, 
