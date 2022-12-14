@@ -6,6 +6,7 @@ import { CSSTransition } from "react-transition-group";
 import { HandySvg } from "handy-svg";
 import { useSwiper } from 'swiper/react';
 import {Navigation} from "swiper"
+import Image from "next/image";
 
 interface GalleryProps {
   photos: IPicture[];
@@ -65,7 +66,7 @@ export const GalleryModal = ({
                   event.stopPropagation();
                 }}
               >
-                <img src={img} alt={title || ""} />
+                <Image width={1100} height={755} src={img} alt={title || ""} />
                 
             
               </div>
