@@ -10,8 +10,8 @@ export default function Document() {
           rel="stylesheet"/>
           <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
       <meta name="google-site-verification" content="SwLaCbTiIPUCkuYeQtUhioN4cLDA2lnIOz20dRTgVBI" />
-          <meta property="og:title" content="Образовательный цент Yes-Edu."/>
-          <meta property="og:description" content="Образовательный цент Yes-Edu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."/>
+          <meta property="og:title" content="Образовательный центр Yes-Edu."/>
+          <meta property="og:description" content="Образовательный центр Yes-Edu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."/>
           <meta property="og:image" content="/assets/android-chrome-192x192.png"/>
              {/* Global Site Tag (gtag.js) - Google Analytics */}
              <Script

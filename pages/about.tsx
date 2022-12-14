@@ -39,7 +39,7 @@ export default function AboutPage({reviews, partners, gallery}: AboutPageProps) 
       <Head>
         <title>О нас - Образовательный центр</title>
         <meta name="description" content="О нас"/>
-        <meta name="description" content="Образовательный цент YESedu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."></meta>
+        <meta name="description" content="Образовательный центр YESedu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."></meta>
         <meta name="keywords" content="Образовательный центр, 
 Изучения языков,
 Быстрое изучение английского в Таджикистане, 

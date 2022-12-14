@@ -36,7 +36,7 @@ export default function CoursesPage({courseList, reviews}: CoursesPageProps) {
     <>
       <Head>
         <title>Наши курсы - Образовательный центр</title>
-        <meta name="description" content="Образовательный цент YESedu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."></meta>
+        <meta name="description" content="Образовательный центр YESedu , это центр где используется  инновационная методика  которая даёт настоящий результат, что на шаг приближает к мечте."></meta>
         <meta name="description" content="Наши курсы"/>
         <meta name="keywords" content="Изучения языков,
 Русский язык, 
