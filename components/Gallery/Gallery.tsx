@@ -5,6 +5,7 @@ import H2 from '../UI/Typography/H2/H2'
 import { IPicture } from '../../models/IPicture'
 import { useState } from 'react'
 import { GalleryModal } from './GallerryModal/GalleryModal'
+import Image from 'next/image'
 
 interface GalleryProps {
   photos: IPicture[]
@@ -35,7 +36,12 @@ function Gallery({photos}: GalleryProps) {
            {photos.map(({img, title, id}, index) =>
             <li key={index} className={classes.Item}>
               <picture >
-                <img onClick={() => handle(index)} className={classes.Img} src={img} alt={title || ''}/>
+                <Image onClick={() => handle(index)} 
+                className={classes.Img} 
+                src={img} 
+                width={300} 
+                height={300} 
+                alt={title || ''}/>
               </picture>
             </li>
           )}
