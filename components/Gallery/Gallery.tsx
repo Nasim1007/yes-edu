@@ -33,7 +33,7 @@ function Gallery({photos}: GalleryProps) {
             <GalleryModal photos={photos} showPicture={showPicture} setShowPicture={setShowPicture} activeIndex={activeIndex}/>
       
 
-           {photos.map(({img, title, id}, index) =>
+           {photos?.map(({img, title, id}, index) =>
             <li key={index} className={classes.Item}>
               <picture >
                 <Image onClick={() => handle(index)} 

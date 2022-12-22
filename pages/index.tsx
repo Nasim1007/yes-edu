@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery/Gallery'
 import HelpCourse from '../components/HelpCourse/HelpCourse'
 import MainSlider from '../components/MainSlider/MainSlider'
 import AboutVideo from '../components/AboutVideo/AboutVideo'
+import Instagram from '../components/Instagram/Instagram'
 import ReviewClients from '../components/ReviewClients/ReviewClients'
 import { ISlide } from '../models/ISlide'
 import { ICourse } from '../models/ICourse'
@@ -67,6 +68,9 @@ export default function HomePage({mainSlides, courseList, gallery, reviews, part
       <AboutVideo/>
       <Contacts/>
       <ReviewClients reviews={reviews}/>
+      <Instagram 
+        counter={6}
+        token={'IGQVJYdWRjelNLWkRxQU9MR1RmbWVPWGZAkM3R4QTNLZAW1pWll1a18tdzJzZAkd6NEM4SXVuMXJvTDhvZAU9PT3VRak9nZA0hKRDlNei11OWZATVVhkc0x0X2FLYkM5VDBKTFJVZAWlkUG9wTjZAObWJieUxQWgZDZD'}/>
     </>
   )
 }

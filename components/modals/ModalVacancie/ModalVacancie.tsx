@@ -117,7 +117,7 @@ function ModalVacan({ vacancies }: ModalVacancyProps) {
                                     })}
                                 >
                                     <option className={classes.Option} value="" disabled selected hidden>Выберите вакансия</option>
-                                    {vacancies.map(vacan => (
+                                    {vacancies?.map(vacan => (
                                         <option
                                             selected={selectedVacan === vacan.id || false}
                                             key={vacan.id}

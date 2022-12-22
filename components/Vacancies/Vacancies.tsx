@@ -16,7 +16,7 @@ function Vacancies({vacancyList}: VacanciesProps) {
       <h2 className={classes.Title}>Вакансии</h2>
       <Wrapper className={classes.Wrapper}>
         <ul className={classes.List}>
-          {vacancyList.map(vacancy => (
+          {vacancyList?.map(vacancy => (
             <VacancyCard
             key={vacancy.id}
               {...vacancy}

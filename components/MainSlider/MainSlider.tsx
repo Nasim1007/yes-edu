@@ -37,7 +37,7 @@ function MainSlider({slides}: MainSliderProps) {
           className={classes.Slider}
           {...settings}
         >
-          {slides.map(({button_link, button_text, description, img, title, id}) => (
+          {slides?.map(({button_link, button_text, description, img, title, id}) => (
             <div key={id} className={classes.Slide}>
               <div className={classes.Left}>
                 <h3 className={classes.Title}>{HTMLReactParser(title)}</h3>
