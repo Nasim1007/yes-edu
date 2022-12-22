@@ -18,20 +18,24 @@ import { fetchCourses } from '../utils/requests/fetchCourses'
 import { fetchGallery } from '../utils/requests/fetchGallery'
 import { fetchReviewClients } from '../utils/requests/fetchReviews'
 import { fetchPartners } from '../utils/requests/fetchPartners'
+import { IPostInstagram } from '../models/IPost'
+import { fetchPostsInstagram } from '../utils/requests/fetchPostsInstagram'
 
 export async function getServerSideProps() {
   const mainSlides: ISlide[] | null = await fetchSlides()
   const courseList: ICourse[] | null = await fetchCourses(5)
   const gallery: IPicture[] | null = await fetchGallery()
   const reviews: IReview[] | null = await fetchReviewClients()
-  const partners: IPartner[] | null = await fetchPartners()
+  // const partners: IPartner[] | null = await fetchPartners()
+  const posts: IPostInstagram[] | null = await fetchPostsInstagram(6)
 
   return {
     props: {
       mainSlides,
       courseList,
       gallery,
-      reviews
+      reviews,
+      posts,
     },
   }
 }
@@ -42,9 +46,11 @@ interface HomePageProps {
   gallery: IPicture[]
   reviews: IReview[]
   partners: IPartner[]
+  posts: IPostInstagram[]
 }
 
-export default function HomePage({mainSlides, courseList, gallery, reviews, partners}: HomePageProps) {
+export default function HomePage({mainSlides, courseList, gallery, reviews, posts}: HomePageProps) {
+console.log(posts);
 
   return (
     <>
@@ -68,9 +74,7 @@ export default function HomePage({mainSlides, courseList, gallery, reviews, part
       <AboutVideo/>
       <Contacts/>
       <ReviewClients reviews={reviews}/>
-      <Instagram 
-        counter={6}
-        token={'IGQVJYdWRjelNLWkRxQU9MR1RmbWVPWGZAkM3R4QTNLZAW1pWll1a18tdzJzZAkd6NEM4SXVuMXJvTDhvZAU9PT3VRak9nZA0hKRDlNei11OWZATVVhkc0x0X2FLYkM5VDBKTFJVZAWlkUG9wTjZAObWJieUxQWgZDZD'}/>
+      <Instagram posts={posts}/>
     </>
   )
 }

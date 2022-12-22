@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+
 import { IPostInstagram } from '../../models/IPost';
 import Wrapper from '../UI/Wrapper/Wrapper';
 import H3 from '../UI/Typography/H3/H3';
@@ -6,44 +7,11 @@ import H2 from '../UI/Typography/H2/H2';
 import classes from './Instagram.module.scss'
 import styles from './styles.module.css'
 
-interface Instagram {
-  token: string
-  counter: number
+interface InstagramProps {
+  posts: IPostInstagram[]
 }
 
-export default function Instagram({token, counter}: Instagram){
-  const [posts, setPosts] = useState<IPostInstagram[]>([])
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [showImage, setShowImage] = useState(false);
-
-  let url = `https://graph.instagram.com/me/media?fields=media_count,media_type,permalink,media_url,caption&&access_token=${token}`
-  
-  useEffect(() => {
-    const fetchData = async () => {
-            setIsLoading(true);
-            fetch(url)
-              .then(response => response.json())
-              .then(result => {
-                setPosts(result.data)
-                console.log('JavaScript version is here https://codecanyon.net/item/instaget-javascript-library-for-instagram/26300578');
-              })
-              .catch((error) => setIsError(true));
-            setIsLoading(false);
-          };
-          fetchData();
-          const callback = (entries: any) => {
-            entries.forEach((entry: any) => {
-              if (entry.isIntersecting) {
-                setShowImage(true);
-              }
-            });
-          };
-      
-          const options = {
-            threshold: 1.0
-          };
-  }, [url])
+export default function Instagram({posts}: InstagramProps){
   
   return (
     <div className={classes.Gallery}>
@@ -51,9 +19,8 @@ export default function Instagram({token, counter}: Instagram){
       <H3 tagName="h2">Галерея</H3>
       <H2 tagName="h3">Наш инстаграм</H2>
       <ul className={classes.List}>
-      {isLoading ? (<div> Loading... </div>)
-         :
-         posts.slice(0, counter)?.map((data) =>
+      {
+         posts?.map((data) =>
           <li key={data.id} className={classes.Item}>
               <a
                 href={data.permalink}
@@ -66,7 +33,7 @@ export default function Instagram({token, counter}: Instagram){
                           key={data.id}
                           src={data.media_url}
                           alt="description"
-                        /> : <video className={classes.Img} key={data.id} src={data.media_url} alt={data.caption} type="video/mp4"></video>
+                        /> : <video autoPlay className={classes.Video} key={data.id} src={data.media_url}></video>
                       }
             {/* <picture >
               <img onClick={() => {}} 
