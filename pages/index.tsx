@@ -27,7 +27,7 @@ export async function getServerSideProps() {
   const gallery: IPicture[] | null = await fetchGallery()
   const reviews: IReview[] | null = await fetchReviewClients()
   // const partners: IPartner[] | null = await fetchPartners()
-  const posts: IPostInstagram[] | null = await fetchPostsInstagram(6)
+  const posts: IPostInstagram[] | null = await fetchPostsInstagram(8)
 
   return {
     props: {

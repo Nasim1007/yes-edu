@@ -33,7 +33,7 @@ export default function Instagram({posts}: InstagramProps){
                           key={data.id}
                           src={data.media_url}
                           alt="description"
-                        /> : <video autoPlay className={classes.Video} key={data.id} src={data.media_url}></video>
+                        /> : <video className={classes.Video} key={data.id} src={data.media_url}></video>
                       }
             {/* <picture >
               <img onClick={() => {}} 
