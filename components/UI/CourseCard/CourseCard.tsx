@@ -27,7 +27,7 @@ function CourseCard({name, id, icon, className, info, student, link}: CourseCard
     >
       <h3 className={classes.Name} title={name}>{name}</h3>
       <div className={classes.Info}>
-      { info && <h4>В программу входят: {info}</h4>}
+      { info && <p>{info}</p>}
       { student && <h4>{student}</h4>}
       </div>
       <img
