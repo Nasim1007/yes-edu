@@ -8,13 +8,14 @@ interface VacancyCardProps extends IVacancy {
 
 }
 
-function VacancyCard({ salary, experience, name, id, schedule }: VacancyCardProps) {
+function VacancyCard({ salary, experience, name, id, schedule, description }: VacancyCardProps) {
   const dispatch = useAppDispatch()
   return (
     <li className={classes.Card}>
       <h3 className={classes.Title}>{name}</h3>
 
       <dl className={classes.List}>
+        <p className={classes.Desciption}>{description}</p>
         <div className={classes.Item}>
           <dt className={classes.Name}>Опыт</dt>
           <dd className={classes.Value}>{experience}</dd>

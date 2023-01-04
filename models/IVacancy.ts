@@ -4,4 +4,5 @@ export interface IVacancy {
   experience: string
   schedule: string
   salary: string
+  description: string
 }

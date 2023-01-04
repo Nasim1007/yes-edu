@@ -27,20 +27,14 @@
   font-size: 24px;
   line-height: 28px;
   color: $primary;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
 
   @media (max-width: $desktopSmall) {
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 28px;
-  }
-
-  @media (max-width: $tabletSmall) {
-    margin-bottom: 20px;
   }
 
   @media (max-width: 500px) {
-    margin-bottom: 24px;
     font-size: 24px;
     line-height: 28px;
   }
@@ -98,5 +92,31 @@
   &:hover{
     background: $primary;
     color: #fff;
+  }
+}
+.Desciption {
+  margin-top: 0;
+  margin: 0 0 40px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -moz-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 7;
+  -webkit-line-clamp: 7;
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: $tabletSmall) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 24px;
+    line-height: 28px;
   }
 }
